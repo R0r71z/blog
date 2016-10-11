@@ -1,0 +1,26 @@
+<!doctype hmtl>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="/css/styles.css">
+		<title>Profile - {{user.user_id}}</title>
+	</head>
+	<body>
+		<div id="user-holder">
+			<div id="username"><b id="user-id">{{user.user_id}}</b></div><br><br>
+			<div id="profile-picture">Pic</div>
+			<div id="user-info">
+				<b>Fecha de nacimiento</b>: {{user.user_date}}<br>
+				<b>Numero de telefono</b>: {{user.user_tel}}<br>
+				<b>E-Mail</b>: {{user.user_mail}}<br>
+				{%if desc%}
+					<b>Descripcion</b>: {{desc}}
+				{%endif%}<br><br>
+				{%if modificable == True%}
+					<button><a href="profile/_edit">Modificar informacion</button>
+				{%endif%}
+			</div>
+
+		</div>
+
+	</body>
+</html>
